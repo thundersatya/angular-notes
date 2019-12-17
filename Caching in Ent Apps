@@ -1,0 +1,17 @@
+Rest API - HTTP Cache - Springboot
+
+Different Cahing products
+EhCache - Spring
+HastleCache
+
+Dataconsistancy Problems with Caching due to multi node environment
+To address the problem
+
+1) Data invalidation
+2) Data Replication
+
+Dont operate applicaion with bigger heap size just for the purpose if Caching. Its lead to long major GCs
+Too small cahe also a bad idea as we need to flush the old data more frequently and replicate to other nodes
+Also we will have less hits due to lack of data and leads to pooe peformance gains
+
+Distributed Caching
