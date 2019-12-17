@@ -1,3 +1,15 @@
+Template Driven Forms:
+
+(ngSubmit)="onSubmit()" #formref="ngForm"
+
+FormControl:
+#controlname="ngModel"
+
+FormGroupControl:
+
+#groupcontrolname="ngModelGroup"
+
+this.form.reset();
 Angular Pipes:
 
 Parameterized pipes
