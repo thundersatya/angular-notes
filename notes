@@ -3,3 +3,4 @@ Angular Pipes:
 Parameterized pipes
 Custom pipes
 Impure Pipes
+Custom pipes should implement PipeTransform, add a @Pipe() decorator
