@@ -1,0 +1,16 @@
+spring.security.user.name=foo
+spring.security.user.password=foo
+
+There are two steps involved in enabling authentication
+
+1) Get hold of "AuthenticationManagerBuilder"
+2) Configure it
+
+Create class:
+SpringSecurityConfiguration extends WebSecurityConfigurerAdapter
+
+@Bean
+	public PasswordEncoder getPasswordEncoder()
+	{
+		return NoOpPasswordEncoder.getInstance();
+	}
