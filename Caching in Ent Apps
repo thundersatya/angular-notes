@@ -1,8 +1,25 @@
 Rest API - HTTP Cache - Springboot
 
+1) How about data consistamcy?
+2) Which data I should cache? (Read intensive)
+3) Where should I maintain cache? (Only use existing cache implementation. Never write your own caching implementations)
+4) Impact of cache on the infrastructure
+5) Security Gap - Be Mindful of caching sensitive data. Cached data can be viewed by doing a memory dump.. Use some kind of encryption
+while caching sensitive data
+
 Different Cahing products
 EhCache - Spring
-HastleCache
+Infinispan - Jboss
+HastleCast -
+MemCache
+XtremCache
+Apache - DirectMemory
+
+Implementaions:
+Gemfire
+Coherance
+Oracele 12c in memory database
+
 
 Dataconsistancy Problems with Caching due to multi node environment
 To address the problem
@@ -14,4 +31,12 @@ Dont operate applicaion with bigger heap size just for the purpose if Caching. I
 Too small cahe also a bad idea as we need to flush the old data more frequently and replicate to other nodes
 Also we will have less hits due to lack of data and leads to pooe peformance gains
 
-Distributed Caching
+***Distributed Caching***
+Cache outside the JVM added as separate node. It can be scalled up dynamicaclly (CACHE NODE)
+
+Spring provides absraction around cache implementation which helps to swith caching vendors without making any/minimal code changes
+
+@EnableCahing
+@Cacheable
+
+Spring vs Jcache
